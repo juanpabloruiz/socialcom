@@ -1,10 +1,10 @@
 <?php
 
 // Cambiar datos para la conexión
-$conexion = mysqli_connect('localhost', 'usuario', 'clave', 'basededatos');
+$conn = mysqli_connect('localhost', 'usuario', 'clave', 'basededatos');
 
 // Configuración de caracteres
-mysqli_set_charset($conexion, 'utf8');
+mysqli_set_charset($conn, 'utf8');
 
 // Mostrar errores sin es necesario
 ini_set('display_errors', 1);
