@@ -1,7 +1,7 @@
 <?php
 include 'conexion.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registro'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ingreso'])) {
     
     $correo = $_POST['correo'];
     $clave = $_POST['clave'];
