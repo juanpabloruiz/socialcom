@@ -1,15 +1,22 @@
 <?php
+include('conexion.php');
 
-include('conn.php');
-
-if (isset($_POST['registro'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registro'])) {
     
-    $shopname = $_POST['shopname'];
-    $lastname = $_POST['lastname'];
-    $firstname = $_POST['firstname'];
-    $mail = $_POST['mail'];
-    $pass = $_POST['pass'];
+    $apellido = $_POST['apellido'];
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $clave = $_POST['clave'];
 
-    mysqli_query($conn, "INSERT INTO users (shopname, lastname, firstname, mail, pass, created) VALUES ('$shopname', '$lastname', '$firstname', '$mail', '$pass', NOW())");
+    // Encriptar de forma segura
+    $hash = password_hash($clave, PASSWORD_DEFAULT);
+
+    // Insertar en la base de datos
+    $sentencia = $conexion->prepare("INSERT INTO usuarios (apellido, nombre, correo, clave, creado) VALUES (?, ?, ?, ?, NOW())");
+    $sentencia->bind_param("ssss", $apellido, $nombre, $correo, $hash);
+    $sentencia->execute();
+
+    echo "Usuario registrado con contraseña segura.";
     header("Location: ./");
+
 }

@@ -7,7 +7,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
 
     <!-- Metatags -->
     <meta charset="UTF-8">
@@ -41,22 +41,20 @@
 
             <form method="POST" action="registro.php">
                 <div class="mb-3">
-                    <input type="text" name="shopname" class="form-control" placeholder="Nombre de la tienda">
+                    <input type="text" name="apellido" class="form-control" placeholder="Apellidos">
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="lastname" class="form-control" placeholder="Apellidos">
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombres">
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="firstname" class="form-control" placeholder="Nombres">
+                    <input type="email" name="correo" class="form-control" placeholder="Correo electrónico">
                 </div>
                 <div class="mb-3">
-                    <input type="email" name="mail" class="form-control" placeholder="Correo electrónico">
+                    <input type="password" name="clave" class="form-control" placeholder="Contraseña">
                 </div>
                 <div class="mb-3">
-                    <input type="password" name="pass" class="form-control" placeholder="Contraseña">
-                </div>
-                <div class="mb-3">
-                    <input type="password" name="passconfirm" class="form-control" placeholder="Confirmar contraseña">
+                    <input type="password" name="confirma_clave" class="form-control"
+                        placeholder="Confirmar contraseña">
                 </div>
                 <div class="mb-3">
                     <input type="submit" name="registro" value="Registrarse" class="btn btn-primary">
