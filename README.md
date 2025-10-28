@@ -1,2 +1,2 @@
-# socialcom
+# SoCo
 App social with e-commerce 
