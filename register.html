@@ -40,27 +40,33 @@
             <h2 class="my-4">Registro</h2>
 
             <form method="POST" action="record.php">
+
                 <div class="mb-3">
                     <input type="email" name="mail" class="form-control" placeholder="Correo electrónico">
                 </div>
+
                 <div class="mb-3">
-                    <input type="password" name="mail" class="form-control" placeholder="Contraseña">
+                    <input type="password" name="pass" class="form-control" placeholder="Contraseña">
                 </div>
-                <div id="alerta"></div>
+
+                <div id="alert"></div>
+
                 <div class="mb-3">
-                    <input type="password" name="confirm_mail" class="form-control" placeholder="Confirmar contraseña">
+                    <input type="password" name="confirm_pass" class="form-control" placeholder="Confirmar contraseña">
                 </div>
+
                 <div class="mb-3">
                     <input type="text" name="lastname" class="form-control" placeholder="Apellidos">
                 </div>
+
                 <div class="mb-3">
                     <input type="text" name="firstname" class="form-control" placeholder="Nombres">
                 </div>
 
-
                 <div class="mb-3">
                     <input type="submit" name="record" value="Registrarse" class="btn btn-primary">
                 </div>
+                
             </form>
 
         </section>
@@ -68,7 +74,7 @@
     </main>
 
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/revision_clave.js" defer></script>
+    <script src="js/confirm_pass.js" defer></script>
 
 </body>
 
